@@ -1,0 +1,2 @@
+//union type
+fun
