@@ -37,7 +37,12 @@ function login(user: User | Admin): void {
 // lap 1
 const arr1 = [1, 2, 3, 4, 5];
 const arr4 = ['a', 'b', 'c', 'd', 'e',1, 2, 3, 4, 5];
- function sortInfo<T>(arr: T[], callback:(a:T , b:T) => number):T[]{
+ function sortInfo<T>(arr: T[], callback?:(a:T , b:T) => number):T[]{
+    if(!callback){
+        callback = (a:T, b:T) => {
+            return a>b? 1 :  -1 
+        }
+    }
     for(let i = 0; i < arr.length; i++){
         for(let j = i + 1; j < arr.length; j++){
             if(callback(arr[i], arr[j]) < 0){
