@@ -1,7 +1,7 @@
 {
     "compilerOptions": {
         "outDir": "./dist",
-        "watch":  true,
+        // "watch":  true,
         "strictNullChecks": true
     },
     "include": ["src"],
